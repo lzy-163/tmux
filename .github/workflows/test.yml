@@ -24,9 +24,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
       - name: Install tmux
         run: sudo apt-get update && sudo apt-get install -y tmux=3.2a-4ubuntu0.2
-      - uses: actions/checkout@v4
       - name: Run Tests
         shell: bash
         run: |
